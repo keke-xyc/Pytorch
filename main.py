@@ -28,7 +28,7 @@ train_iter = torch.utils.data.DataLoader(mnist_train, batch_size=batch_size, shu
 test_iter = torch.utils.data.DataLoader(mnist_test, batch_size=batch_size, shuffle=False, num_workers=0)
 
 # 初始化参数与线性回归也类似，权重参数设置为均值为0 标准差为0.01的正态分布；偏差设置为0
-W = torch.tensor(np.random.normal(0, 0.01, (num_inputs, num_outputs)), dtype=torch.float)
+W = torch.tensor(np.random.normal(0, 0.01, (num_inputs, num_outputs)), dtype=torch.float32)
 b = torch.zeros(num_outputs, dtype=torch.float32)
 
 # 同样的，开启模型参数梯度
